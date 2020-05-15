@@ -1,5 +1,6 @@
 .App {
-  text-align: center;
+  display: flex;
+  background: #b4e6f0;
 }
 
 .App-logo {
@@ -35,4 +36,9 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.auth {
+  display: flex;
+  flex-direction: column;
 }

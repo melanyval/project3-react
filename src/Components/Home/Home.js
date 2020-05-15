@@ -1,9 +1,19 @@
 import React from "react";
 import "./Home.css";
+
+import Signup from "../Authentication/Login";
+import Login from "../Authentication/Signup";
+
+import Blogs from "../Blog/Blogs";
+
 const Home = () => {
   return (
     <div className="Home">
-      <h1>This is the home page!</h1>
+      <Blogs />
+      <div className="auth">
+        <Signup />
+        <Login />
+      </div>
     </div>
   );
 };

@@ -9,27 +9,21 @@ const service = axios.create({
 
 console.log("hello");
 
-const AUTH_SERVICE = {
+const BLOG_SERVICE = {
   // userData is a placeholder (represents the user's inputs in the signup and login form)
-  signup(userData) {
+  createBlog(blogData) {
     // const { username, email, password } = req.body; <===> userData
     // console.log('user data in the service: ', userData);
-    return service.post("/api/signup", userData);
+    return service.post("/api/blogPost", blogData);
   },
 
-  login(userData) {
-    return service.post("/api/login", userData);
+  getAllBlogs() {
+    return service.get("/api/blogPost");
   },
 
-  logout() {
-    return service.post("/api/logout", {});
+  getSingleBlog() {
+    return service.get("/api/singleBlogPost/:id");
   },
-
-  getUser() {
-    return service.get("/api/isLoggedIn");
-  },
-
-  
 };
 
-export default AUTH_SERVICE;
+export default BLOG_SERVICE;
