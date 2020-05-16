@@ -1,9 +1,19 @@
 import React from "react";
 
-import { Redirect } from "react-router-dom";
+import { Link, Redirect } from "react-router-dom";
 import { AuthContext } from "../../context/index";
+import "./Auth.css";
+import Profile from './Profile';
+
 
 function Signup() {
+
+
+  function logout() {
+    localStorage.clear();
+    window.location.href = '/';
+}
+
   return (
     <AuthContext.Consumer>
       {(context) => {
@@ -12,18 +22,20 @@ function Signup() {
           message,
           isLoggedIn,
         } = context.state;
-        console.log(context.state.username);
+        console.log(context);
         const { handleSignupInput, handleSignupSubmit } = context;
         return (
-          <div className="auth-form">
+          <div>
             {isLoggedIn ? (
               <div>
-                <h1>Thanks for logging in! Profiles coming soon :)</h1>
-                <Redirect to="/" />
+                <h4>To create a new blog post, <span><Link to = "/createBlog">click here</Link></span></h4>
+                <button onClick = {logout}>
+            Log out
+            </button>
               </div>
             ) : (
               <>
-                <h2>Signup form</h2>
+                <h2>Signup</h2>
                 <form onSubmit={handleSignupSubmit}>
                   <label htmlFor="username">
                     Username:

@@ -26,6 +26,7 @@ class AuthProvider extends React.Component {
   componentDidMount() {
     AUTH_SERVICE.getUser()
       .then((responseFromServer) => {
+        console.log(responseFromServer);
         // console.log('res: ', responseFromServer);
 
         const { user } = responseFromServer.data;
@@ -36,9 +37,7 @@ class AuthProvider extends React.Component {
           isLoggedIn: true,
         }));
       })
-      .catch((err) =>
-        console.log("Error while getting the user: ", err.response.data)
-      );
+      .catch((err) => console.log("Error while getting the user: ", err));
   }
 
   handleSignupInput = (e) => {
@@ -80,7 +79,7 @@ class AuthProvider extends React.Component {
           isLoggedIn: true,
         }));
         alert(`${message}`);
-        this.props.history.push("/home");
+        this.props.history.push("/");
       })
       .catch((err) => {
         // console.log(err.response);
@@ -131,7 +130,7 @@ class AuthProvider extends React.Component {
           isLoggedIn: true,
         }));
         alert(`${message}`);
-        this.props.history.push("/home");
+        this.props.history.push("/");
       })
       .catch((err) => {
         // console.log(err.response);

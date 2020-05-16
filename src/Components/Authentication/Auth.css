@@ -1,9 +1,17 @@
 .auth-form {
-  width: 15vw;
+  width: 160px;
   /* border: solid black 1px; */
   border-radius: 10px;
   margin: 15px;
   padding: 10px;
   background: white;
   box-shadow: 10px 10px rgb(162, 215, 233);
+}
+
+.auth-form input {
+  width: 130px;
+}
+
+.profile-card {
+  text-align: center;
 }

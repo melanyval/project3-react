@@ -19,12 +19,12 @@ li {
 }
 
 .blog-card {
-  width: 350px;
+  width: 300px;
   margin: 10px 70px 10px 0;
 }
 
 .blog-card img {
-  width: 350px;
+  width: 300px;
 }
 
 .blog-card li {
@@ -36,4 +36,30 @@ li {
 .all-blogs {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
+
+.welcome {
+  text-align: center;
+}
+
+.SingleBlog {
+  margin: 0 auto;
+  background: white;
+  width: 70vw;
+  padding-bottom: 50px;
+}
+
+.author-image {
+  margin-left: 10vw;
+}
+
+.author-image img {
+  width: 50vw;
+}
+
+.small-margin {
+  margin: 0 10%;
+}
+
+
