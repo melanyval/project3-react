@@ -69,7 +69,7 @@ const SingleBlog = () => {
     return (
       <div className="single-blog-page">
         <div className="author-image">
-          <img src="https://media.istockphoto.com/photos/fitness-woman-working-out-on-yoga-mat-picture-id863580848?k=6&m=863580848&s=612x612&w=0&h=K5TiwcZGhoA-H2X8cyG_671JAnVj1lAxGc-0MWQKdTo=" />
+          <img src={blog.pictureUrl} />
           <h4>
             Published on {blog.createdAt} by {blog.author}
           </h4>
