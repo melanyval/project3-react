@@ -27,7 +27,7 @@ const SingleBlog = () => {
 
   React.useEffect(() => {
     service
-      .get(`api/singleBlogPost/${blogId}`)
+      .get(`/api/singleBlogPost/${blogId}`)
       .then((blog) => {
         console.log(blog);
         setBlog(blog.data.blogs);
