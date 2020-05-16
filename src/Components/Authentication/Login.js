@@ -27,8 +27,8 @@ export const UserLogin = (props) => {
   }, []);
 
   function logout() {
-        localStorage.clear();
-        window.location.href = '/';
+    localStorage.clear();
+    window.location.href = "/";
   }
 
   function handleSubmit(e) {
@@ -78,9 +78,7 @@ export const UserLogin = (props) => {
                 />
               </label>
 
-              <button>
-                Log in
-                </button>
+              <button>Log in</button>
             </form>
           </>
         )}
@@ -94,9 +92,7 @@ export const UserLogin = (props) => {
                 <Link to="/createBlog">click here</Link>
               </span>
             </h4>
-            <button onClick = {logout}>
-            Log out
-            </button>
+            <button onClick={logout}>Log out</button>
           </div>
         ) : (
           <Signup />
