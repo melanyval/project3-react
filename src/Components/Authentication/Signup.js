@@ -8,7 +8,6 @@ import Profile from './Profile';
 
 function Signup() {
 
-
   function logout() {
     localStorage.clear();
     window.location.href = '/';
@@ -29,6 +28,7 @@ function Signup() {
             {isLoggedIn ? (
               <div>
                 <h4>To create a new blog post, <span><Link to = "/createBlog">click here</Link></span></h4>
+                <h4>To view and update your complete profile, <span><Link to = "/profile">click here</Link></span></h4>
                 <button onClick = {logout}>
             Log out
             </button>

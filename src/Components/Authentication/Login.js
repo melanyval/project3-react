@@ -26,11 +26,6 @@ export const UserLogin = (props) => {
     console.log("password: ", password);
   }, []);
 
-  function logout() {
-    localStorage.clear();
-    window.location.href = "/";
-  }
-
   function handleSubmit(e) {
     e.preventDefault();
 
@@ -39,12 +34,23 @@ export const UserLogin = (props) => {
       .then((userdata) => {
         console.log(userdata);
         window.alert("You have successfully logged in. Welcome!");
-        //window.location = "/";
         setUser({
           username: userdata.data.user.username,
           email: userdata.data.user.email,
         });
         setLoggedIn(true);
+      })
+      .catch((error) => console.log(error));
+  }
+
+  function logout() {
+
+    axios
+      .post(baseURL + "/api/logout", { email, password })
+      .then((userdata) => {
+        console.log(userdata);
+        window.alert("You have successfully logged out.");
+        setLoggedIn(false);
       })
       .catch((error) => console.log(error));
   }
@@ -90,6 +96,12 @@ export const UserLogin = (props) => {
               To create a new blog post,{" "}
               <span>
                 <Link to="/createBlog">click here</Link>
+              </span>
+            </h4>            
+            <h4>
+              To view/update your profile,{" "}
+              <span>
+                <Link to="/profile">click here</Link>
               </span>
             </h4>
             <button onClick={logout}>Log out</button>

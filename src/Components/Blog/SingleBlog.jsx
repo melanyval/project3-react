@@ -47,10 +47,14 @@ const SingleBlog = () => {
       </div>
     ));
   }
+  
 
   const [comment, setComment] = React.useState([]);
 
   function handleSubmit(e) {
+
+e.preventDefault();
+
     service
       .post(`/api/comment`, {
         comment: comment,
@@ -58,6 +62,7 @@ const SingleBlog = () => {
       })
       .then((comment) => {
         console.log(comment);
+        window.location.reload();
       })
       .catch((err) => {
         throw err;

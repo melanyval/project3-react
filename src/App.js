@@ -12,6 +12,8 @@ import Login from "./Components/Authentication/Login";
 import Blogs from "./Components/Blog/Blogs";
 import CreateBlog from "./Components/Blog/CreateBlog";
 import SingleBlog from "./Components/Blog/SingleBlog";
+import ProfilePage from "./Components/Authentication/ProfilePage";
+import EditProfile from "./Components/Authentication/EditProfile";
 
 // import logo from "./logo.svg";
 import "./App.css";
@@ -26,6 +28,8 @@ function App() {
           <Route exact path="/login" component={Login} />
           <Route exact path="/blogs/:id" component={SingleBlog} />
           <Route exact path="/createBlog" component={CreateBlog} />
+          <Route exact path="/profile" component={ProfilePage} />          
+          <Route exact path="/editProfile" component={EditProfile} />          
         </Switch>
       </BrowserRouter>
     </div>
