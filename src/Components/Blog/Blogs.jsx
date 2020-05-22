@@ -41,7 +41,7 @@ const Blogs = () => {
 
   return (
     <div className="Blogs">
-      <h1 class="welcome">Welcome to More about Mel</h1>
+      <h1 class="welcome">More about Mel</h1>
       <ul className="all-blogs">{getAllBlogs()}</ul>
     </div>
   );

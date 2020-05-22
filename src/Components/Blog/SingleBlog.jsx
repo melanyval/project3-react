@@ -62,7 +62,7 @@ e.preventDefault();
       })
       .then((comment) => {
         console.log(comment);
-        window.location.reload();
+        // window.location.reload();
       })
       .catch((err) => {
         throw err;
